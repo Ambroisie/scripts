@@ -1,0 +1,10 @@
+---
+kind: pipeline
+type: exec
+name: shellcheck
+
+steps:
+- name: shellcheck
+  commands:
+  - nix develop -c find -name '*.sh' -exec shellcheck '{}' +
+...
